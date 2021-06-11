@@ -3,31 +3,44 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6683224258E7FBF00293FF1 /* LimpioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6683223258E7FBF00293FF1 /* LimpioApp.swift */; };
-		D6683226258E7FBF00293FF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6683225258E7FBF00293FF1 /* ContentView.swift */; };
-		D6683228258E7FC100293FF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6683227258E7FC100293FF1 /* Assets.xcassets */; };
-		D668322B258E7FC100293FF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D668322A258E7FC100293FF1 /* Preview Assets.xcassets */; };
-		D668322D258E7FC100293FF1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D668322C258E7FC100293FF1 /* Persistence.swift */; };
-		D6683230258E7FC100293FF1 /* Limpio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D668322E258E7FC100293FF1 /* Limpio.xcdatamodeld */; };
+		D64A00C7267404EB00EF78C3 /* Limpio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D64A00B6267404EA00EF78C3 /* Limpio.xcdatamodeld */; };
+		D64A00C8267404EB00EF78C3 /* Limpio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D64A00B6267404EA00EF78C3 /* Limpio.xcdatamodeld */; };
+		D64A00C9267404EB00EF78C3 /* LimpioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64A00B8267404EA00EF78C3 /* LimpioApp.swift */; };
+		D64A00CA267404EB00EF78C3 /* LimpioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64A00B8267404EA00EF78C3 /* LimpioApp.swift */; };
+		D64A00CB267404EB00EF78C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64A00B9267404EA00EF78C3 /* ContentView.swift */; };
+		D64A00CC267404EB00EF78C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64A00B9267404EA00EF78C3 /* ContentView.swift */; };
+		D64A00CD267404EB00EF78C3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64A00BA267404EA00EF78C3 /* Persistence.swift */; };
+		D64A00CE267404EB00EF78C3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64A00BA267404EA00EF78C3 /* Persistence.swift */; };
+		D64A00CF267404EB00EF78C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64A00BB267404EB00EF78C3 /* Assets.xcassets */; };
+		D64A00D0267404EB00EF78C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64A00BB267404EB00EF78C3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D6683220258E7FBF00293FF1 /* Limpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Limpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6683223258E7FBF00293FF1 /* LimpioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimpioApp.swift; sourceTree = "<group>"; };
-		D6683225258E7FBF00293FF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D6683227258E7FC100293FF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D668322A258E7FC100293FF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D668322C258E7FC100293FF1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		D668322F258E7FC100293FF1 /* Limpio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Limpio.xcdatamodel; sourceTree = "<group>"; };
-		D6683231258E7FC100293FF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D64A00B7267404EA00EF78C3 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		D64A00B8267404EA00EF78C3 /* LimpioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimpioApp.swift; sourceTree = "<group>"; };
+		D64A00B9267404EA00EF78C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D64A00BA267404EA00EF78C3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D64A00BB267404EB00EF78C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D64A00C0267404EB00EF78C3 /* Limpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Limpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64A00C6267404EB00EF78C3 /* Limpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Limpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64A00D92674069200EF78C3 /* Limpio--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Limpio--macOS--Info.plist"; sourceTree = "<group>"; };
+		D64A00DA267406A700EF78C3 /* Limpio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Limpio.entitlements; sourceTree = "<group>"; };
+		D6E458DF26740B9900C7140A /* Limpio--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Limpio--iOS--Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D668321D258E7FBF00293FF1 /* Frameworks */ = {
+		D64A00BD267404EB00EF78C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D64A00C3267404EB00EF78C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,124 +50,158 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D6683217258E7FBF00293FF1 = {
+		D64A00B0267404E900EF78C3 = {
 			isa = PBXGroup;
 			children = (
-				D6683222258E7FBF00293FF1 /* Limpio */,
-				D6683221258E7FBF00293FF1 /* Products */,
+				D6E458DF26740B9900C7140A /* Limpio--iOS--Info.plist */,
+				D64A00DA267406A700EF78C3 /* Limpio.entitlements */,
+				D64A00D92674069200EF78C3 /* Limpio--macOS--Info.plist */,
+				D64A00B5267404EA00EF78C3 /* Shared */,
+				D64A00C1267404EB00EF78C3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D6683221258E7FBF00293FF1 /* Products */ = {
+		D64A00B5267404EA00EF78C3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D6683220258E7FBF00293FF1 /* Limpio.app */,
+				D64A00B8267404EA00EF78C3 /* LimpioApp.swift */,
+				D64A00B9267404EA00EF78C3 /* ContentView.swift */,
+				D64A00BA267404EA00EF78C3 /* Persistence.swift */,
+				D64A00BB267404EB00EF78C3 /* Assets.xcassets */,
+				D64A00B6267404EA00EF78C3 /* Limpio.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D64A00C1267404EB00EF78C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D64A00C0267404EB00EF78C3 /* Limpio.app */,
+				D64A00C6267404EB00EF78C3 /* Limpio.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D6683222258E7FBF00293FF1 /* Limpio */ = {
-			isa = PBXGroup;
-			children = (
-				D6683223258E7FBF00293FF1 /* LimpioApp.swift */,
-				D6683225258E7FBF00293FF1 /* ContentView.swift */,
-				D6683227258E7FC100293FF1 /* Assets.xcassets */,
-				D668322C258E7FC100293FF1 /* Persistence.swift */,
-				D6683231258E7FC100293FF1 /* Info.plist */,
-				D668322E258E7FC100293FF1 /* Limpio.xcdatamodeld */,
-				D6683229258E7FC100293FF1 /* Preview Content */,
-			);
-			path = Limpio;
-			sourceTree = "<group>";
-		};
-		D6683229258E7FC100293FF1 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				D668322A258E7FC100293FF1 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D668321F258E7FBF00293FF1 /* Limpio */ = {
+		D64A00BF267404EB00EF78C3 /* Limpio (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6683234258E7FC100293FF1 /* Build configuration list for PBXNativeTarget "Limpio" */;
+			buildConfigurationList = D64A00D3267404EB00EF78C3 /* Build configuration list for PBXNativeTarget "Limpio (iOS)" */;
 			buildPhases = (
-				D668321C258E7FBF00293FF1 /* Sources */,
-				D668321D258E7FBF00293FF1 /* Frameworks */,
-				D668321E258E7FBF00293FF1 /* Resources */,
+				D64A00BC267404EB00EF78C3 /* Sources */,
+				D64A00BD267404EB00EF78C3 /* Frameworks */,
+				D64A00BE267404EB00EF78C3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Limpio;
-			productName = Limpio;
-			productReference = D6683220258E7FBF00293FF1 /* Limpio.app */;
+			name = "Limpio (iOS)";
+			productName = "Limpio (iOS)";
+			productReference = D64A00C0267404EB00EF78C3 /* Limpio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D64A00C5267404EB00EF78C3 /* Limpio (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D64A00D6267404EB00EF78C3 /* Build configuration list for PBXNativeTarget "Limpio (macOS)" */;
+			buildPhases = (
+				D64A00C2267404EB00EF78C3 /* Sources */,
+				D64A00C3267404EB00EF78C3 /* Frameworks */,
+				D64A00C4267404EB00EF78C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Limpio (macOS)";
+			productName = "Limpio (macOS)";
+			productReference = D64A00C6267404EB00EF78C3 /* Limpio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D6683218258E7FBF00293FF1 /* Project object */ = {
+		D64A00B1267404E900EF78C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					D668321F258E7FBF00293FF1 = {
-						CreatedOnToolsVersion = 12.3;
+					D64A00BF267404EB00EF78C3 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					D64A00C5267404EB00EF78C3 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = D668321B258E7FBF00293FF1 /* Build configuration list for PBXProject "Limpio" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = D64A00B4267404E900EF78C3 /* Build configuration list for PBXProject "Limpio" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = D6683217258E7FBF00293FF1;
-			productRefGroup = D6683221258E7FBF00293FF1 /* Products */;
+			mainGroup = D64A00B0267404E900EF78C3;
+			productRefGroup = D64A00C1267404EB00EF78C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D668321F258E7FBF00293FF1 /* Limpio */,
+				D64A00BF267404EB00EF78C3 /* Limpio (iOS) */,
+				D64A00C5267404EB00EF78C3 /* Limpio (macOS) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D668321E258E7FBF00293FF1 /* Resources */ = {
+		D64A00BE267404EB00EF78C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D668322B258E7FC100293FF1 /* Preview Assets.xcassets in Resources */,
-				D6683228258E7FC100293FF1 /* Assets.xcassets in Resources */,
+				D64A00CF267404EB00EF78C3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D64A00C4267404EB00EF78C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D64A00D0267404EB00EF78C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D668321C258E7FBF00293FF1 /* Sources */ = {
+		D64A00BC267404EB00EF78C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D668322D258E7FC100293FF1 /* Persistence.swift in Sources */,
-				D6683230258E7FC100293FF1 /* Limpio.xcdatamodeld in Sources */,
-				D6683226258E7FBF00293FF1 /* ContentView.swift in Sources */,
-				D6683224258E7FBF00293FF1 /* LimpioApp.swift in Sources */,
+				D64A00C7267404EB00EF78C3 /* Limpio.xcdatamodeld in Sources */,
+				D64A00CD267404EB00EF78C3 /* Persistence.swift in Sources */,
+				D64A00C9267404EB00EF78C3 /* LimpioApp.swift in Sources */,
+				D64A00CB267404EB00EF78C3 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D64A00C2267404EB00EF78C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D64A00C8267404EB00EF78C3 /* Limpio.xcdatamodeld in Sources */,
+				D64A00CE267404EB00EF78C3 /* Persistence.swift in Sources */,
+				D64A00CA267404EB00EF78C3 /* LimpioApp.swift in Sources */,
+				D64A00CC267404EB00EF78C3 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		D6683232258E7FC100293FF1 /* Debug */ = {
+		D64A00D1267404EB00EF78C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,17 +252,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		D6683233258E7FC100293FF1 /* Release */ = {
+		D64A00D2267404EB00EF78C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,77 +306,179 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D64A00D4267404EB00EF78C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Limpio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CZ72YFTC2R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Limpio--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = Limpio;
+				INFOPLIST_KEY_CFBundleName = Limpio;
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.pintopinto.Limpio;
+				PRODUCT_NAME = Limpio;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		D64A00D5267404EB00EF78C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Limpio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CZ72YFTC2R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Limpio--iOS--Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = Limpio;
+				INFOPLIST_KEY_CFBundleName = Limpio;
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.pintopinto.Limpio;
+				PRODUCT_NAME = Limpio;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		D6683235258E7FC100293FF1 /* Debug */ = {
+		D64A00D7267404EB00EF78C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Limpio/Preview Content\"";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CZ72YFTC2R;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Limpio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Limpio--macOS--Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = Limpio;
+				INFOPLIST_KEY_CFBundleName = Limpio;
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.peaking.Limpio;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.pintopinto.Limpio;
+				PRODUCT_NAME = Limpio;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D6683236258E7FC100293FF1 /* Release */ = {
+		D64A00D8267404EB00EF78C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Limpio/Preview Content\"";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CZ72YFTC2R;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Limpio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Limpio--macOS--Info.plist";
+				INFOPLIST_KEY_CFBundleExecutable = Limpio;
+				INFOPLIST_KEY_CFBundleName = Limpio;
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.peaking.Limpio;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.pintopinto.Limpio;
+				PRODUCT_NAME = Limpio;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D668321B258E7FBF00293FF1 /* Build configuration list for PBXProject "Limpio" */ = {
+		D64A00B4267404E900EF78C3 /* Build configuration list for PBXProject "Limpio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6683232258E7FC100293FF1 /* Debug */,
-				D6683233258E7FC100293FF1 /* Release */,
+				D64A00D1267404EB00EF78C3 /* Debug */,
+				D64A00D2267404EB00EF78C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6683234258E7FC100293FF1 /* Build configuration list for PBXNativeTarget "Limpio" */ = {
+		D64A00D3267404EB00EF78C3 /* Build configuration list for PBXNativeTarget "Limpio (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6683235258E7FC100293FF1 /* Debug */,
-				D6683236258E7FC100293FF1 /* Release */,
+				D64A00D4267404EB00EF78C3 /* Debug */,
+				D64A00D5267404EB00EF78C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D64A00D6267404EB00EF78C3 /* Build configuration list for PBXNativeTarget "Limpio (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D64A00D7267404EB00EF78C3 /* Debug */,
+				D64A00D8267404EB00EF78C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -338,17 +486,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D668322E258E7FC100293FF1 /* Limpio.xcdatamodeld */ = {
+		D64A00B6267404EA00EF78C3 /* Limpio.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D668322F258E7FC100293FF1 /* Limpio.xcdatamodel */,
+				D64A00B7267404EA00EF78C3 /* Shared.xcdatamodel */,
 			);
-			currentVersion = D668322F258E7FC100293FF1 /* Limpio.xcdatamodel */;
+			currentVersion = D64A00B7267404EA00EF78C3 /* Shared.xcdatamodel */;
 			path = Limpio.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = D6683218258E7FBF00293FF1 /* Project object */;
+	rootObject = D64A00B1267404E900EF78C3 /* Project object */;
 }
