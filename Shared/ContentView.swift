@@ -19,19 +19,20 @@ struct ContentView: View {
     var body: some View {
       NavigationView {
         List {
-              ForEach(items) { item in
-                  Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-              }
-              .onDelete(perform: deleteItems)
+          ForEach(items) { item in
+            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
           }
-          .toolbar {
-              #if os(iOS)
-              EditButton()
-              #endif
-
-              Button(action: addItem) {
-                  Label("Add Item", systemImage: "plus")
+          .onDelete(perform: deleteItems)
+        }
+        .toolbar {
+          HStack {
+#if os(iOS)
+            EditButton()
+#endif
+            Button(action: addItem) {
+              Label("Add Item", systemImage: "plus")
               }
+          }
         }
       }
     }
