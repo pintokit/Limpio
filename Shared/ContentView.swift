@@ -20,7 +20,11 @@ struct ContentView: View {
     NavigationView {
       List {
         ForEach(items) { item in
-          Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+          if let name = item.name {
+            Text("\(name) at \(item.timestamp!, formatter: itemFormatter)")
+          } else {
+            fatalError("Item name missing")
+          }
         }
         .onDelete(perform: deleteItems)
       }
@@ -41,6 +45,7 @@ struct ContentView: View {
     withAnimation {
       let newItem = Item(context: viewContext)
       newItem.timestamp = Date()
+      newItem.name = "Test"
       
       do {
         try viewContext.save()
