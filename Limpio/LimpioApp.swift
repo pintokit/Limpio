@@ -11,7 +11,9 @@ import SwiftUI
 struct LimpioApp: App {
     var body: some Scene {
         WindowGroup {
-            TaskListView()
+            NavigationView {
+                RoomListView()
+            }
         }
     }
 }
