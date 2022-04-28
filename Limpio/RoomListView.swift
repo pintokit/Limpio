@@ -25,8 +25,12 @@ struct RoomListView: View {
 
 struct RoomListView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomListWatchView()
-            .previewLayout(.fixed(width: 396, height: 484))
-        RoomListView()
+        NavigationView {
+            RoomListWatchView()
+        }
+        .previewLayout(.fixed(width: 396, height: 484))
+        NavigationView {
+            RoomListView()
+        }
     }
 }

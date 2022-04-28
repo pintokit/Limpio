@@ -25,8 +25,10 @@ struct RoomListWatchView: View {
 
 struct RoomListWatchView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomListWatchView()
-            .previewLayout(.fixed(width: 396, height: 484))
-            .environment(\.colorScheme, .dark)
+        NavigationView {
+            RoomListWatchView()
+        }
+        .previewLayout(.fixed(width: 396, height: 484))
+        .environment(\.colorScheme, .dark)
     }
 }
