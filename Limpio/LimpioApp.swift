@@ -12,7 +12,7 @@ struct LimpioApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                RoomListView()
+                iOSRoomListView()
             }
         }
     }
