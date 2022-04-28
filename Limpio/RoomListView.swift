@@ -18,8 +18,17 @@ struct RoomListView: View {
                     Text(room.name)
                 }
             }
+            .onDelete {
+                rooms.remove(atOffsets: $0)
+            }
+            .onMove {
+                rooms.move(fromOffsets: $0, toOffset: $1)
+            }
         }
         .navigationTitle("Rooms")
+        .toolbar {
+            EditButton()
+        }
     }
 }
 
