@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RoomListWatchView: View {
-    var rooms: [Room] = Room.listPreview
+    @State private var rooms: [Room] = Room.listPreview
     
     var body: some View {
         List {
