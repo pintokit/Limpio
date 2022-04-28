@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RoomListWatchView: View {
+    var rooms: [Room] = Room.listPreview
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }

@@ -17,3 +17,7 @@ struct Room: Identifiable, Codable {
         self.name = name
     }
 }
+
+extension Room {
+    static let listPreview: [Room] = [Room(name: "Livingroom"), Room(name: "Bedroom"), Room(name: "Kitchen")]
+}
