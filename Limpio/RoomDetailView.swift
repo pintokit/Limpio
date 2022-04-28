@@ -15,11 +15,14 @@ struct RoomDetailView: View {
         Form {
             TextField("Room name", text: $roomName)
         }
+        .navigationTitle("New Room")
     }
 }
 
 struct RoomDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomDetailView()
+        NavigationView {
+            RoomDetailView()
+        }
     }
 }
