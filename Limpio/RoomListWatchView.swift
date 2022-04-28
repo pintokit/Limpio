@@ -13,6 +13,7 @@ struct RoomListWatchView: View {
     var body: some View {
         List {
             ForEach(rooms) { room in
+                Image(systemName: "house.fill")
                 Text(room.name)
             }
         }
