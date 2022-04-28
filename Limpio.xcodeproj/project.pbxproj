@@ -10,12 +10,41 @@
 		633D0C37281B23F7009CD2A1 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C30281B23F7009CD2A1 /* RoomDetailView.swift */; };
 		633D0C38281B23F7009CD2A1 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C31281B23F7009CD2A1 /* RoomListView.swift */; };
 		633D0C3A281B23F7009CD2A1 /* iOSRoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */; };
+		63B47634281B273F00D9419B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B47633281B273F00D9419B /* Assets.xcassets */; };
+		63B4763A281B274000D9419B /* LimpioWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63B47639281B274000D9419B /* LimpioWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		63B4763F281B274000D9419B /* LimpioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B4763E281B274000D9419B /* LimpioApp.swift */; };
+		63B47641281B274000D9419B /* WatchRoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B47640281B274000D9419B /* WatchRoomListView.swift */; };
+		63B47643281B274000D9419B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B47642281B274000D9419B /* NotificationController.swift */; };
+		63B47645281B274000D9419B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B47644281B274000D9419B /* NotificationView.swift */; };
+		63B47647281B274000D9419B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B47646281B274000D9419B /* ComplicationController.swift */; };
+		63B47649281B274100D9419B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B47648281B274100D9419B /* Assets.xcassets */; };
+		63B4764C281B274100D9419B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B4764B281B274100D9419B /* Preview Assets.xcassets */; };
+		63B47651281B274100D9419B /* LimpioWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 63B47631281B273E00D9419B /* LimpioWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		63B47659281B275400D9419B /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C31281B23F7009CD2A1 /* RoomListView.swift */; };
+		63B4765A281B279300D9419B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC912819FF85004E3620 /* Room.swift */; };
 		63D11CB92817211E00AE1671 /* LimpioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D11CB82817211E00AE1671 /* LimpioApp.swift */; };
 		63D11CBD2817212200AE1671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D11CBC2817212200AE1671 /* Assets.xcassets */; };
 		63D11CC02817212200AE1671 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D11CBF2817212200AE1671 /* Preview Assets.xcassets */; };
 		63F3AC922819FF85004E3620 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC912819FF85004E3620 /* Room.swift */; };
 		63F3AC94281A0036004E3620 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC93281A0036004E3620 /* Task.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63B4763B281B274000D9419B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63D11CAD2817211E00AE1671 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63B47638281B274000D9419B;
+			remoteInfo = "LimpioWatch WatchKit Extension";
+		};
+		63B4764F281B274100D9419B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63D11CAD2817211E00AE1671 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63B47630281B273E00D9419B;
+			remoteInfo = LimpioWatch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		633D0C28281B2354009CD2A1 /* Embed Watch Content */ = {
@@ -24,8 +53,20 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				63B47651281B274100D9419B /* LimpioWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63B47655281B274100D9419B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				63B4763A281B274000D9419B /* LimpioWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -34,6 +75,18 @@
 		633D0C30281B23F7009CD2A1 /* RoomDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		633D0C31281B23F7009CD2A1 /* RoomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSRoomListView.swift; sourceTree = "<group>"; };
+		63B47631281B273E00D9419B /* LimpioWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimpioWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63B47633281B273F00D9419B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63B47639281B274000D9419B /* LimpioWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LimpioWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63B4763E281B274000D9419B /* LimpioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimpioApp.swift; sourceTree = "<group>"; };
+		63B47640281B274000D9419B /* WatchRoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchRoomListView.swift; sourceTree = "<group>"; };
+		63B47642281B274000D9419B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		63B47644281B274000D9419B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		63B47646281B274000D9419B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		63B47648281B274100D9419B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63B4764B281B274100D9419B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		63B4764D281B274100D9419B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63B4764E281B274100D9419B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		63D11CB52817211E00AE1671 /* Limpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Limpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D11CB82817211E00AE1671 /* LimpioApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimpioApp.swift; sourceTree = "<group>"; };
 		63D11CBC2817212200AE1671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +96,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		63B47636281B274000D9419B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63D11CB22817211E00AE1671 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +113,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63B47632281B273E00D9419B /* LimpioWatch */ = {
+			isa = PBXGroup;
+			children = (
+				63B47633281B273F00D9419B /* Assets.xcassets */,
+			);
+			path = LimpioWatch;
+			sourceTree = "<group>";
+		};
+		63B4763D281B274000D9419B /* LimpioWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				63B4763E281B274000D9419B /* LimpioApp.swift */,
+				63B47640281B274000D9419B /* WatchRoomListView.swift */,
+				63B47642281B274000D9419B /* NotificationController.swift */,
+				63B47644281B274000D9419B /* NotificationView.swift */,
+				63B47646281B274000D9419B /* ComplicationController.swift */,
+				63B47648281B274100D9419B /* Assets.xcassets */,
+				63B4764D281B274100D9419B /* Info.plist */,
+				63B4764E281B274100D9419B /* PushNotificationPayload.apns */,
+				63B4764A281B274100D9419B /* Preview Content */,
+			);
+			path = "LimpioWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		63B4764A281B274100D9419B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				63B4764B281B274100D9419B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		63D11CAC2817211E00AE1671 = {
 			isa = PBXGroup;
 			children = (
 				63D11CB72817211E00AE1671 /* Limpio */,
+				63B47632281B273E00D9419B /* LimpioWatch */,
+				63B4763D281B274000D9419B /* LimpioWatch WatchKit Extension */,
 				63D11CB62817211E00AE1671 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				63D11CB52817211E00AE1671 /* Limpio.app */,
+				63B47631281B273E00D9419B /* LimpioWatch.app */,
+				63B47639281B274000D9419B /* LimpioWatch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +199,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		63B47630281B273E00D9419B /* LimpioWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63B47656281B274100D9419B /* Build configuration list for PBXNativeTarget "LimpioWatch" */;
+			buildPhases = (
+				63B4762F281B273E00D9419B /* Resources */,
+				63B47655281B274100D9419B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63B4763C281B274000D9419B /* PBXTargetDependency */,
+			);
+			name = LimpioWatch;
+			productName = LimpioWatch;
+			productReference = 63B47631281B273E00D9419B /* LimpioWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		63B47638281B274000D9419B /* LimpioWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63B47652281B274100D9419B /* Build configuration list for PBXNativeTarget "LimpioWatch WatchKit Extension" */;
+			buildPhases = (
+				63B47635281B274000D9419B /* Sources */,
+				63B47636281B274000D9419B /* Frameworks */,
+				63B47637281B274000D9419B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LimpioWatch WatchKit Extension";
+			productName = "LimpioWatch WatchKit Extension";
+			productReference = 63B47639281B274000D9419B /* LimpioWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		63D11CB42817211E00AE1671 /* Limpio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63D11CC32817212200AE1671 /* Build configuration list for PBXNativeTarget "Limpio" */;
@@ -115,6 +245,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				63B47650281B274100D9419B /* PBXTargetDependency */,
 			);
 			name = Limpio;
 			productName = Limpio;
@@ -131,6 +262,12 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					63B47630281B273E00D9419B = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					63B47638281B274000D9419B = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					63D11CB42817211E00AE1671 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -150,11 +287,30 @@
 			projectRoot = "";
 			targets = (
 				63D11CB42817211E00AE1671 /* Limpio */,
+				63B47630281B273E00D9419B /* LimpioWatch */,
+				63B47638281B274000D9419B /* LimpioWatch WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		63B4762F281B273E00D9419B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B47634281B273F00D9419B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63B47637281B274000D9419B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B4764C281B274100D9419B /* Preview Assets.xcassets in Resources */,
+				63B47649281B274100D9419B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63D11CB32817211E00AE1671 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +323,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		63B47635281B274000D9419B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B47643281B274000D9419B /* NotificationController.swift in Sources */,
+				63B47641281B274000D9419B /* WatchRoomListView.swift in Sources */,
+				63B4765A281B279300D9419B /* Room.swift in Sources */,
+				63B47647281B274000D9419B /* ComplicationController.swift in Sources */,
+				63B47659281B275400D9419B /* RoomListView.swift in Sources */,
+				63B4763F281B274000D9419B /* LimpioApp.swift in Sources */,
+				63B47645281B274000D9419B /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		63D11CB12817211E00AE1671 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,7 +352,134 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		63B4763C281B274000D9419B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63B47638281B274000D9419B /* LimpioWatch WatchKit Extension */;
+			targetProxy = 63B4763B281B274000D9419B /* PBXContainerItemProxy */;
+		};
+		63B47650281B274100D9419B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63B47630281B273E00D9419B /* LimpioWatch */;
+			targetProxy = 63B4764F281B274100D9419B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		63B47653281B274100D9419B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LimpioWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = CZ72YFTC2R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LimpioWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LimpioWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.peaking.Limpio.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		63B47654281B274100D9419B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LimpioWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = CZ72YFTC2R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LimpioWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LimpioWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.peaking.Limpio.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		63B47657281B274100D9419B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CZ72YFTC2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = LimpioWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = Limpio;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = co.peaking.Limpio;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.peaking.Limpio.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		63B47658281B274100D9419B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CZ72YFTC2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = LimpioWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = Limpio;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = co.peaking.Limpio;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.peaking.Limpio.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
 		63D11CC12817212200AE1671 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -240,6 +537,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -293,6 +591,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -358,6 +657,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		63B47652281B274100D9419B /* Build configuration list for PBXNativeTarget "LimpioWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63B47653281B274100D9419B /* Debug */,
+				63B47654281B274100D9419B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63B47656281B274100D9419B /* Build configuration list for PBXNativeTarget "LimpioWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63B47657281B274100D9419B /* Debug */,
+				63B47658281B274100D9419B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		63D11CB02817211E00AE1671 /* Build configuration list for PBXProject "Limpio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
