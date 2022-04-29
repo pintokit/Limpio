@@ -9,16 +9,41 @@ import SwiftUI
 
 struct iOSRoomListView: View {
     
-    @Environment(\.editMode) private var editMode
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var isPresentingNewRoomView = false
     
     var body: some View {
         VStack {
             RoomListView()
             Button("New Room") {
-                
+                isPresentingNewRoomView = true
             }
             .padding()
             .buttonStyle(.borderedProminent)
+            .sheet(isPresented: $isPresentingNewRoomView) {
+                NavigationView {
+                    RoomDetailView()
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Dismiss") {
+                                    isPresentingNewRoomView = false
+//                                    RESET NEW ROOM TO ROOMS
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Add") {
+//                                    ADD NEW ROOM TO ROOMS
+                                    isPresentingNewRoomView = false
+                                }
+                            }
+                        }
+                }
+            }
+        }
+        .onChange(of: scenePhase) { phase in
+            if phase == .inactive {
+//                SAVE ACTION
+            }
         }
     }
 }
