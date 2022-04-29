@@ -19,7 +19,7 @@ struct iOSRoomListView: View {
 struct iOSRoomListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RoomListView()
+            iOSRoomListView()
         }
     }
 }
