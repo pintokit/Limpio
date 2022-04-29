@@ -10,6 +10,7 @@ import SwiftUI
 struct RoomListView: View {
     
     @State private var rooms: [Room] = Room.listPreview
+    @State private var newRoom: String = ""
     
     var body: some View {
         List {
@@ -26,9 +27,7 @@ struct RoomListView: View {
                 rooms.move(fromOffsets: $0, toOffset: $1)
             }
 #if os(watchOS)
-            Button(action: {}) {
-                Text("New Room")
-            }
+            TextField("New Room", text: $newRoom)
 #endif
         }
         .navigationTitle("Rooms")
