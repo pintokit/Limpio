@@ -10,6 +10,7 @@
 		633D0C37281B23F7009CD2A1 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C30281B23F7009CD2A1 /* RoomDetailView.swift */; };
 		633D0C38281B23F7009CD2A1 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C31281B23F7009CD2A1 /* RoomListView.swift */; };
 		633D0C3A281B23F7009CD2A1 /* iOSRoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */; };
+		6378561F281CABCE00DD4A9F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC93281A0036004E3620 /* Task.swift */; };
 		63B47634281B273F00D9419B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B47633281B273F00D9419B /* Assets.xcassets */; };
 		63B4763A281B274000D9419B /* LimpioWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63B47639281B274000D9419B /* LimpioWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		63B4763F281B274000D9419B /* LimpioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B4763E281B274000D9419B /* LimpioApp.swift */; };
@@ -333,6 +334,7 @@
 			files = (
 				63B47643281B274000D9419B /* NotificationController.swift in Sources */,
 				63B47641281B274000D9419B /* WatchRoomListView.swift in Sources */,
+				6378561F281CABCE00DD4A9F /* Task.swift in Sources */,
 				63B4765A281B279300D9419B /* Room.swift in Sources */,
 				63E036C5281B2C2A007B2E82 /* RoomDetailView.swift in Sources */,
 				63B47647281B274000D9419B /* ComplicationController.swift in Sources */,
