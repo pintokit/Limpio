@@ -12,17 +12,20 @@ struct Task: Identifiable, Codable {
     var name: String
     var participants: [String]
     var frequency: String
+    var room: Room
     var lastCompletionDate: Date
     
     init(id: UUID = UUID(),
          name: String,
          participants: [String],
          frequency: String,
+         room: Room,
          lastCompletionDate: Date = Date()) {
         self.id = id
         self.name = name
         self.participants = participants
         self.frequency = frequency
+        self.room = room
         self.lastCompletionDate = lastCompletionDate
     }
 }
