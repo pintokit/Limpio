@@ -29,3 +29,7 @@ struct Task: Identifiable, Codable {
         self.lastCompletionDate = lastCompletionDate
     }
 }
+
+extension Task {
+    static let listPreview: [Task] = [Task(name: "Empty trash", participants: ["Solis, Brandon, Mazza"], frequency: "3", room: Room(name: "Kitchen")), Task(name: "Clean shower door", participants: ["Solis, Brandon, Mazza"], frequency: "2", room: Room(name: "Bathroom")), Task(name: "Clean couch", participants: ["Solis, Brandon, Mazza"], frequency: "1", room: Room(name: "Livingroom")), Task(name: "Make bed", participants: ["Solis"], frequency: "4", room: Room(name: "Bedroom"))]
+}
