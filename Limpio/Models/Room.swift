@@ -19,5 +19,5 @@ struct Room: Identifiable, Codable {
 }
 
 extension Room {
-    static let listPreview: [Room] = [Room(name: "Livingroom"), Room(name: "Bedroom"), Room(name: "Kitchen")]
+    static let listPreview: [Room] = [Room(name: "Livingroom"), Room(name: "Bedroom"), Room(name: "Kitchen"), Room(name: "Bathroom")]
 }
