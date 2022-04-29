@@ -12,7 +12,14 @@ struct iOSRoomListView: View {
     @Environment(\.editMode) private var editMode
     
     var body: some View {
-        RoomListView()
+        VStack {
+            RoomListView()
+            Button("New Room") {
+                
+            }
+            .padding()
+            .buttonStyle(.borderedProminent)
+        }
     }
 }
 
