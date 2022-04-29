@@ -54,8 +54,10 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Limpio">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63B47630281B273E00D9419B"
@@ -63,7 +65,7 @@
             BlueprintName = "LimpioWatch"
             ReferencedContainer = "container:Limpio.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -71,8 +73,10 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Limpio">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63B47630281B273E00D9419B"
@@ -80,7 +84,16 @@
             BlueprintName = "LimpioWatch"
             ReferencedContainer = "container:Limpio.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "63B47630281B273E00D9419B"
+            BuildableName = "LimpioWatch.app"
+            BlueprintName = "LimpioWatch"
+            ReferencedContainer = "container:Limpio.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

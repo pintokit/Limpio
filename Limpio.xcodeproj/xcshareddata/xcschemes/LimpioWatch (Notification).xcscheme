@@ -56,8 +56,10 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "LimpioWatch WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Limpio">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63B47630281B273E00D9419B"
@@ -65,7 +67,7 @@
             BlueprintName = "LimpioWatch"
             ReferencedContainer = "container:Limpio.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,8 +77,10 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "LimpioWatch WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Limpio">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63B47630281B273E00D9419B"
@@ -84,7 +88,16 @@
             BlueprintName = "LimpioWatch"
             ReferencedContainer = "container:Limpio.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "63B47630281B273E00D9419B"
+            BuildableName = "LimpioWatch.app"
+            BlueprintName = "LimpioWatch"
+            ReferencedContainer = "container:Limpio.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
