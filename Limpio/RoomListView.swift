@@ -27,7 +27,7 @@ struct RoomListView: View {
             }
 #if os(watchOS)
             Button(action: {}) {
-                Text("Edit")
+                Text("New Room")
             }
 #endif
         }
