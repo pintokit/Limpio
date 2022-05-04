@@ -15,4 +15,25 @@ class RoomStore: ObservableObject {
             .appendingPathComponent("limpio.data")
     }
     
+    static func load(completion: @escaping(Result<[Room], Error>) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            do {
+                let fileURL = try fileURL()
+                guard let file = try? FileHandle(forReadingFrom: fileURL) else {
+                    DispatchQueue.main.async {
+                        completion(.success([]))
+                    }
+                    return
+                }
+                let rooms = try JSONDecoder().decode([Room].self, from: file.availableData)
+                DispatchQueue.main.async {
+                    completion(.success(rooms))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
 }
