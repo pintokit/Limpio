@@ -38,6 +38,19 @@ class RoomStore: ObservableObject {
     }
     
     static func save(rooms: [Room], completion: @escaping(Result<Int, Error>) -> Void) {
-        
+        DispatchQueue.global(qos: .background).async {
+            do {
+                let data = try JSONEncoder().encode(rooms)
+                let fileURL = try fileURL()
+                try data.write(to: fileURL)
+                DispatchQueue.main.async {
+                    completion(.success(rooms.count))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
     }
 }
