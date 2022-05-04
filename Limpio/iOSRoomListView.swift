@@ -22,7 +22,7 @@ struct iOSRoomListView: View {
             .buttonStyle(.borderedProminent)
             .sheet(isPresented: $isPresentingNewRoomView) {
                 NavigationView {
-                    RoomDetailView()
+                    RoomEditView()
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {
                                 Button("Dismiss") {

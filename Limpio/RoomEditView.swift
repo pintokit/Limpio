@@ -1,5 +1,5 @@
 //
-//  RoomDetailView.swift
+//  RoomEditView.swift
 //  Limpio
 //
 //  Created by David Solis on 4/27/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RoomDetailView: View {
+struct RoomEditView: View {
     
     @State private var roomName: String = ""
     
@@ -19,10 +19,10 @@ struct RoomDetailView: View {
     }
 }
 
-struct RoomDetailView_Previews: PreviewProvider {
+struct RoomEditView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RoomDetailView()
+            RoomEditView()
         }
     }
 }

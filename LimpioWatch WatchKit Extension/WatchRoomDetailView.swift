@@ -10,14 +10,14 @@ import SwiftUI
 struct WatchRoomDetailView: View {
     
     var body: some View {
-        RoomDetailView()
+        RoomEditView()
     }
 }
 
 struct WatchRoomDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RoomDetailView()
+            RoomEditView()
         }
     }
 }

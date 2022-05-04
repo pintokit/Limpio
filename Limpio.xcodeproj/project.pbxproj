@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		633D0C37281B23F7009CD2A1 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C30281B23F7009CD2A1 /* RoomDetailView.swift */; };
+		633D0C37281B23F7009CD2A1 /* RoomEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C30281B23F7009CD2A1 /* RoomEditView.swift */; };
 		633D0C38281B23F7009CD2A1 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C31281B23F7009CD2A1 /* RoomListView.swift */; };
 		633D0C3A281B23F7009CD2A1 /* iOSRoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */; };
 		6378561F281CABCE00DD4A9F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC93281A0036004E3620 /* Task.swift */; };
@@ -27,7 +27,7 @@
 		63D11CBD2817212200AE1671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D11CBC2817212200AE1671 /* Assets.xcassets */; };
 		63D11CC02817212200AE1671 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D11CBF2817212200AE1671 /* Preview Assets.xcassets */; };
 		63E036C4281B2C06007B2E82 /* WatchRoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E036C3281B2C06007B2E82 /* WatchRoomDetailView.swift */; };
-		63E036C5281B2C2A007B2E82 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C30281B23F7009CD2A1 /* RoomDetailView.swift */; };
+		63E036C5281B2C2A007B2E82 /* RoomEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C30281B23F7009CD2A1 /* RoomEditView.swift */; };
 		63F3AC922819FF85004E3620 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC912819FF85004E3620 /* Room.swift */; };
 		63F3AC94281A0036004E3620 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC93281A0036004E3620 /* Task.swift */; };
 /* End PBXBuildFile section */
@@ -75,7 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		633D0C30281B23F7009CD2A1 /* RoomDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
+		633D0C30281B23F7009CD2A1 /* RoomEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomEditView.swift; sourceTree = "<group>"; };
 		633D0C31281B23F7009CD2A1 /* RoomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSRoomListView.swift; sourceTree = "<group>"; };
 		63B47631281B273E00D9419B /* LimpioWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimpioWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,7 +175,7 @@
 			children = (
 				63D11CB82817211E00AE1671 /* LimpioApp.swift */,
 				63F3AC97281A0505004E3620 /* Models */,
-				633D0C30281B23F7009CD2A1 /* RoomDetailView.swift */,
+				633D0C30281B23F7009CD2A1 /* RoomEditView.swift */,
 				633D0C31281B23F7009CD2A1 /* RoomListView.swift */,
 				633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */,
 				63D11CBC2817212200AE1671 /* Assets.xcassets */,
@@ -336,7 +336,7 @@
 				63B47641281B274000D9419B /* WatchRoomListView.swift in Sources */,
 				6378561F281CABCE00DD4A9F /* Task.swift in Sources */,
 				63B4765A281B279300D9419B /* Room.swift in Sources */,
-				63E036C5281B2C2A007B2E82 /* RoomDetailView.swift in Sources */,
+				63E036C5281B2C2A007B2E82 /* RoomEditView.swift in Sources */,
 				63B47647281B274000D9419B /* ComplicationController.swift in Sources */,
 				63B47659281B275400D9419B /* RoomListView.swift in Sources */,
 				63B4763F281B274000D9419B /* LimpioApp.swift in Sources */,
@@ -349,7 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				633D0C37281B23F7009CD2A1 /* RoomDetailView.swift in Sources */,
+				633D0C37281B23F7009CD2A1 /* RoomEditView.swift in Sources */,
 				63F3AC94281A0036004E3620 /* Task.swift in Sources */,
 				633D0C38281B23F7009CD2A1 /* RoomListView.swift in Sources */,
 				633D0C3A281B23F7009CD2A1 /* iOSRoomListView.swift in Sources */,
