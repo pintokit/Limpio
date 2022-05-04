@@ -36,4 +36,8 @@ class RoomStore: ObservableObject {
             }
         }
     }
+    
+    static func save(rooms: [Room], completion: @escaping(Result<Int, Error>) -> Void) {
+        
+    }
 }
