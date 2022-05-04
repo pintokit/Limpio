@@ -9,10 +9,22 @@ import SwiftUI
 
 @main
 struct LimpioApp: App {
+    @StateObject private var store = RoomStore()
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                WatchRoomListView()
+                WatchRoomListView(rooms: $store.rooms)
+            }
+            .onAppear {
+                RoomStore.load { result in
+                    switch result {
+                    case .failure(let error):
+                        fatalError(error.localizedDescription)
+                    case .success(let rooms):
+                        store.rooms = rooms
+                    }
+                }
             }
         }
 

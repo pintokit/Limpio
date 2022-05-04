@@ -11,10 +11,11 @@ struct iOSRoomListView: View {
     
     @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingNewRoomView = false
+    @Binding var rooms: [Room]
     
     var body: some View {
         VStack {
-            RoomListView()
+            RoomListView(rooms: $rooms)
             Button("New Room") {
                 isPresentingNewRoomView = true
             }
@@ -51,7 +52,7 @@ struct iOSRoomListView: View {
 struct iOSRoomListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            iOSRoomListView()
+            iOSRoomListView(rooms: .constant(Room.listPreview))
         }
     }
 }

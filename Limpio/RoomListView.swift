@@ -9,12 +9,12 @@ import SwiftUI
 
 struct RoomListView: View {
     
-    @State private var rooms: [Room] = Room.listPreview
     @State private var newRoom: String = ""
+    @Binding var rooms: [Room]
     
     var body: some View {
         List {
-            ForEach(rooms) { room in
+            ForEach($rooms) { $room in
                 HStack {
                     Image(systemName: "house.fill")
                     Text(room.name)
@@ -42,7 +42,7 @@ struct RoomListView: View {
 struct RoomListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RoomListView()
+            RoomListView(rooms: .constant(Room.listPreview))
         }
     }
 }

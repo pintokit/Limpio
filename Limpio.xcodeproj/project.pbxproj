@@ -176,9 +176,9 @@
 		63D11CB72817211E00AE1671 /* Limpio */ = {
 			isa = PBXGroup;
 			children = (
-				63DEBAB1282337C100F71F14 /* RoomStore.swift */,
 				63D11CB82817211E00AE1671 /* LimpioApp.swift */,
 				63F3AC97281A0505004E3620 /* Models */,
+				63DEBAB1282337C100F71F14 /* RoomStore.swift */,
 				633D0C30281B23F7009CD2A1 /* RoomEditView.swift */,
 				633D0C31281B23F7009CD2A1 /* RoomListView.swift */,
 				633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */,
