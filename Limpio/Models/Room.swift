@@ -14,7 +14,7 @@ struct Room: Identifiable, Codable {
     
     init(id: UUID = UUID(),
          name: String,
-         tasks: [Task]) {
+         tasks: [Task] = []) {
         self.id = id
         self.name = name
         self.tasks = tasks
