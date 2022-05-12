@@ -12,12 +12,16 @@ struct WatchRoomListView: View {
     @Binding var rooms: [Room]
     
     var body: some View {
-        RoomListView(rooms: $rooms)
+        NavigationView {
+            RoomListView(rooms: $rooms)
+        }
     }
 }
 
 struct WatchRoomListView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchRoomListView(rooms: .constant(Room.listPreview))
+        NavigationView {
+            WatchRoomListView(rooms: .constant(Room.listPreview))
+        }
     }
 }
