@@ -9,15 +9,19 @@ import SwiftUI
 
 struct WatchRoomDetailView: View {
     
+    @Binding var room: Room
+    
     var body: some View {
-        RoomEditView()
+        NavigationView {
+            RoomDetailView(room: $room)
+        }
     }
 }
 
 struct WatchRoomDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            WatchRoomDetailView()
+            WatchRoomDetailView(room: .constant(Room.listPreview[0]))
         }
     }
 }
