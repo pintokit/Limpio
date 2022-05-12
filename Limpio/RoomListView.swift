@@ -26,9 +26,19 @@ struct RoomListView: View {
             .onMove {
                 rooms.move(fromOffsets: $0, toOffset: $1)
             }
-#if os(watchOS)
-            TextField("New Room", text: $newRoom)
-#endif
+            HStack {
+                TextField("New Room", text: $newRoomName)
+                Button(action: {
+                    withAnimation {
+                        let newRoom = Room(name: newRoomName)
+                        rooms.append(newRoom)
+                        newRoomName = ""
+                    }
+                }) {
+                    Image(systemName: "plus.circle")
+                }
+                .disabled(newRoomName.isEmpty)
+            }
         }
         .navigationTitle("Rooms")
 #if os(iOS)

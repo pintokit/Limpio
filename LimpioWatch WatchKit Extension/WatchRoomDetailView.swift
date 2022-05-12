@@ -17,7 +17,7 @@ struct WatchRoomDetailView: View {
 struct WatchRoomDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RoomEditView()
+            WatchRoomDetailView()
         }
     }
 }
