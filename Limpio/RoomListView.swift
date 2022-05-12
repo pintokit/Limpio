@@ -15,9 +15,11 @@ struct RoomListView: View {
     var body: some View {
         List {
             ForEach($rooms) { $room in
-                HStack {
-                    Image(systemName: "house.fill")
-                    Text(room.name)
+                NavigationLink(destination: RoomDetailView(room: $room)) {
+                    HStack {
+                        Image(systemName: "house.fill")
+                        Text(room.name)
+                    }
                 }
             }
             .onDelete {
