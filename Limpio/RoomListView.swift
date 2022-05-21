@@ -51,6 +51,9 @@ struct RoomListView: View {
         .task {
             await viewModel.refresh()
         }
+        .refreshable {
+            await viewModel.refresh()
+        }
         .navigationTitle("Rooms")
 #if os(iOS)
         .toolbar {
