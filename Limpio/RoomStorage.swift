@@ -25,4 +25,10 @@ actor RoomStorage {
         dispatchPrecondition(condition: .notOnQueue(.main))
         return try JSONDecoder().decode([Room].self, from: file.availableData)
     }
+    
+    func save(rooms: [Room]) throws {
+        let data = try JSONEncoder().encode(rooms)
+        let fileURL = try fileURL()
+        try data.write(to: fileURL)
+    }
 }

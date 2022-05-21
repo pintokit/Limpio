@@ -31,6 +31,11 @@ class RoomsViewModel: ObservableObject {
             fatalError(error.localizedDescription)
         }
     }
+    
+    func save() async {
+        let roomStore = RoomStorage(homeName: homeName)
+        do {
+            try await roomStore.save(rooms: rooms)
         } catch {
             fatalError(error.localizedDescription)
         }
