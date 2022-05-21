@@ -17,7 +17,7 @@ class RoomsViewModel: ObservableObject {
     }
     
     func refresh() async {
-        let roomStore = RoomStorage(homeName: homeName)
+        let roomStore = RoomStore(homeName: homeName)
         do {
             rooms = try await roomStore.load()
         } catch let error as NSError {
@@ -33,7 +33,7 @@ class RoomsViewModel: ObservableObject {
     }
     
     func save() async {
-        let roomStore = RoomStorage(homeName: homeName)
+        let roomStore = RoomStore(homeName: homeName)
         do {
             try await roomStore.save(rooms: rooms)
         } catch {

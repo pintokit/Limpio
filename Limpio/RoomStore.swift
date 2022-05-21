@@ -7,7 +7,7 @@
 
 import Foundation
 
-actor RoomStorage {
+actor RoomStore {
     let homeName: String
     
     init(homeName: String) {
