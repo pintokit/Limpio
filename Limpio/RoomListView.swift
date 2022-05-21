@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RoomListView: View {
     
+    @EnvironmentObject private var store: RoomStore
     @State private var newRoomName = ""
     @Binding var rooms: [Room]
     
@@ -34,6 +35,11 @@ struct RoomListView: View {
                     withAnimation {
                         let newRoom = Room(name: newRoomName)
                         rooms.append(newRoom)
+                        Task {
+                            do {
+                                try await RoomStore.save(rooms: rooms)
+                            }
+                        }
                         newRoomName = ""
                     }
                 }) {
