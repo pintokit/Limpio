@@ -53,4 +53,18 @@ class RoomStore: ObservableObject {
             }
         }
     }
+    
+    @discardableResult
+    static func save(rooms: [Room]) async throws -> Int {
+        try await withCheckedThrowingContinuation { continuation in
+            save(rooms: rooms) { result in
+                switch result {
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                case .success(let roomsSaved):
+                    continuation.resume(returning: roomsSaved)
+                }
+            }
+        }
+    }
 }
