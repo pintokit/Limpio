@@ -9,13 +9,12 @@ import SwiftUI
 
 struct RoomListView: View {
     
-    @EnvironmentObject private var viewModel: RoomsViewModel
+    @StateObject private var viewModel = RoomsViewModel(homeName: "novios")
     @State private var newRoomName = ""
-    @Binding var rooms: [Room]
     
     var body: some View {
         List {
-            ForEach($rooms) { $room in
+            ForEach($viewModel.rooms) { $room in
                 NavigationLink(destination: RoomDetailView(room: $room)) {
                     HStack {
                         Image(systemName: "house.fill")
@@ -24,17 +23,20 @@ struct RoomListView: View {
                 }
             }
             .onDelete {
-                rooms.remove(atOffsets: $0)
+                viewModel.rooms.remove(atOffsets: $0)
             }
             .onMove {
-                rooms.move(fromOffsets: $0, toOffset: $1)
+                viewModel.rooms.move(fromOffsets: $0, toOffset: $1)
+                Task {
+                    await viewModel.save()
+                }
             }
             HStack {
                 TextField("New Room", text: $newRoomName)
                 Button(action: {
                     withAnimation {
                         let newRoom = Room(name: newRoomName)
-                        rooms.append(newRoom)
+                        viewModel.rooms.append(newRoom)
                         Task {
                             await viewModel.save()
                         }
@@ -45,6 +47,9 @@ struct RoomListView: View {
                 }
                 .disabled(newRoomName.isEmpty)
             }
+        }
+        .task {
+            await viewModel.refresh()
         }
         .navigationTitle("Rooms")
 #if os(iOS)
@@ -58,7 +63,7 @@ struct RoomListView: View {
 struct RoomListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RoomListView(rooms: .constant(Room.listPreview))
+            RoomListView()
         }
     }
 }

@@ -9,16 +9,11 @@ import SwiftUI
 
 @main
 struct LimpioApp: App {
-    @StateObject private var viewModel = RoomsViewModel(homeName: "novios")
     
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                iOSRoomListView(rooms: $viewModel.rooms)
-                    .environmentObject(viewModel)
-            }
-            .task {
-                await viewModel.refresh()
+                iOSRoomListView()
             }
         }
     }

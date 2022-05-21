@@ -9,19 +9,15 @@ import SwiftUI
 
 struct iOSRoomListView: View {
     
-    @Binding var rooms: [Room]
-    
     var body: some View {
-        VStack {
-            RoomListView(rooms: $rooms)
-        }
+        RoomListView()
     }
 }
 
 struct iOSRoomListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            iOSRoomListView(rooms: .constant(Room.listPreview))
+            iOSRoomListView()
         }
     }
 }
