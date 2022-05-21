@@ -14,15 +14,8 @@ struct LimpioApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                iOSRoomListView(rooms: $store.rooms) {
-                    _Concurrency.Task {
-                        do {
-                            try await RoomStore.save(rooms: store.rooms)
-                        } catch {
-                            fatalError(error.localizedDescription)
-                        }
-                    }
-                }
+                iOSRoomListView(rooms: $store.rooms)
+                    .environmentObject(store)
             }
             .task {
                 do {
