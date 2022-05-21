@@ -19,7 +19,7 @@ actor RoomStorage {
             .appendingPathComponent("\(homeName).data")
     }
     
-    func load() throws ->[Room] {
+    func load() throws -> [Room] {
         let URL = try fileURL()
         let file = try FileHandle(forReadingFrom: URL)
         dispatchPrecondition(condition: .notOnQueue(.main))
