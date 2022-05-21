@@ -37,6 +37,19 @@ class RoomStore: ObservableObject {
         }
     }
     
+    static func load() async throws -> [Room] {
+        try await withCheckedThrowingContinuation { continuation in
+            load { result in
+                switch result {
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                case .success(let scrums):
+                    continuation.resume(returning: scrums)
+                }
+            }
+        }
+    }
+    
     static func save(rooms: [Room], completion: @escaping(Result<Int, Error>) -> Void) {
         DispatchQueue.global(qos: .background).async {
             do {

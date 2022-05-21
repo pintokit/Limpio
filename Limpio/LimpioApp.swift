@@ -24,14 +24,11 @@ struct LimpioApp: App {
                     }
                 }
             }
-            .onAppear {
-                RoomStore.load { result in
-                    switch result {
-                    case .failure(let error):
-                        fatalError(error.localizedDescription)
-                    case .success(let rooms):
-                        store.rooms = rooms
-                    }
+            .task {
+                do {
+                    store.rooms = try await RoomStore.load()
+                } catch {
+                    fatalError(error.localizedDescription)
                 }
             }
         }
