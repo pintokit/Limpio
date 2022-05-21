@@ -20,6 +20,17 @@ class RoomsViewModel: ObservableObject {
         let roomStore = RoomStorage(homeName: homeName)
         do {
             rooms = try await roomStore.load()
+        } catch let error as NSError {
+            if error.code == 4 {
+                rooms = Room.listPreview
+                try! await roomStore.save(rooms: rooms)
+            } else {
+                fatalError(error.localizedDescription)
+            }
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
         } catch {
             fatalError(error.localizedDescription)
         }
