@@ -15,8 +15,9 @@ actor RoomStore {
     }
     
     private func fileURL () throws -> URL {
-        try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("\(homeName).data")
+        let lowercasedHomeName = homeName.lowercased()
+        return try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            .appendingPathComponent("\(lowercasedHomeName).data")
     }
     
     func load() throws -> [Room] {
