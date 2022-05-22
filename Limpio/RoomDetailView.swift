@@ -12,10 +12,11 @@ struct RoomDetailView: View {
     @Binding var room: Room
     
     var body: some View {
-        VStack {
+        LazyVStack {
             ForEach(room.tasks) { task in
                 Label(task.name, systemImage: "pin.circle")
-                ForEach(task.participants) { participant in
+                let tasks = Array(task.participants)
+                ForEach(tasks) { participant in
                     Label(participant.name, systemImage: "person")
                 }
                 Label(task.frequency.description.localizedLowercase, systemImage: "repeat.circle")
