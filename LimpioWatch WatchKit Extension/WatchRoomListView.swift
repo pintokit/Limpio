@@ -11,7 +11,7 @@ struct WatchRoomListView: View {
     
     var body: some View {
         NavigationView {
-            RoomListView()
+//            RoomListView()
         }
     }
 }
