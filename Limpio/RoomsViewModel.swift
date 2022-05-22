@@ -22,6 +22,7 @@ class RoomsViewModel: ObservableObject {
             rooms = try await roomStore.load()
         } catch let error as NSError {
             if error.code == 4 {
+                // add sample room data after first launch
                 rooms = Room.listPreview
                 try! await roomStore.save(rooms: rooms)
             } else {
