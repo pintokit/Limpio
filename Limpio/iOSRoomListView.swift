@@ -9,24 +9,25 @@ import SwiftUI
 
 struct iOSRoomListView: View {
     
-    @State private var homeName: String?
+    @State var participants: [Participant]?
     
     var body: some View {
-        if let homeName = homeName {
-            let roomViewModel = RoomsViewModel(homeName: homeName)
-            RoomListView(viewModel: roomViewModel)
+        if participants != nil {
+            let roomsViewModel = RoomsViewModel()
+            RoomListView(viewModel: roomsViewModel)
         } else {
-            HomeView(homeName: $homeName)
+            OnBoardView(participants: $participants)
         }
     }
 }
 
-struct HomeView: View {
-    @State private var newHomeName: String = ""
-    @Binding var homeName: String?
+struct OnBoardView: View {
+    @State private var newParticipantName: String = ""
+    @Binding var participants: [Participant]?
+    
     var body: some View {
         LazyVStack {
-            TextField("Home Name", text: $newHomeName)
+            TextField("Participant Name", text: $newParticipantName)
                 .background(.gray)
             Button(action: {}) {
                 Text("Next").frame(maxWidth: 300)

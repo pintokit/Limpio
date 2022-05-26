@@ -66,7 +66,7 @@ struct RoomListView: View {
 struct RoomListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RoomListView(viewModel: RoomsViewModel(homeName: "sampleHomeName"))
+            RoomListView(viewModel: RoomsViewModel())
         }
     }
 }

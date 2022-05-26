@@ -10,14 +10,9 @@ import Foundation
 class RoomsViewModel: ObservableObject {
     
     @Published var rooms: [Room] = []
-    let homeName: String
-    
-    init(homeName: String) {
-        self.homeName = homeName
-    }
     
     func refresh() async {
-        let roomStore = RoomStore(homeName: homeName)
+        let roomStore = RoomStore()
         do {
             rooms = try await roomStore.load()
         } catch let error as NSError {
@@ -34,7 +29,7 @@ class RoomsViewModel: ObservableObject {
     }
     
     func save() async {
-        let roomStore = RoomStore(homeName: homeName)
+        let roomStore = RoomStore()
         do {
             try await roomStore.save(rooms: rooms)
         } catch {

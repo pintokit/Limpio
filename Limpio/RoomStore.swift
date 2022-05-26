@@ -8,16 +8,10 @@
 import Foundation
 
 actor RoomStore {
-    let homeName: String
-    
-    init(homeName: String) {
-        self.homeName = homeName
-    }
     
     private func fileURL () throws -> URL {
-        let lowercasedHomeName = homeName.lowercased()
         return try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("\(lowercasedHomeName).data")
+            .appendingPathComponent("room.data")
     }
     
     func load() throws -> [Room] {
