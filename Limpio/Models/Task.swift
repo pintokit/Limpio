@@ -40,3 +40,7 @@ struct Participant: Identifiable, Codable, Hashable {
         self.name = name
     }
 }
+
+extension Participant {
+    static let listPreview: [Participant] = [Participant(name: "Solis"), Participant(name: "Mazza"), Participant(name: "Bahr")]
+}
