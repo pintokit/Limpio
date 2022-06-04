@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RoomListView: View {
     
-    @StateObject var viewModel: RoomsViewModel
+    @ObservedObject var viewModel: RoomsViewModel
     @State private var newRoomName = ""
     
     var body: some View {

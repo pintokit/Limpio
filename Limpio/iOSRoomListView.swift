@@ -9,39 +9,30 @@ import SwiftUI
 
 struct iOSRoomListView: View {
     
-    @State var participants: [Participant]?
+    @StateObject var roomsViewModel: RoomsViewModel
     
     var body: some View {
-        if participants != nil {
-            let roomsViewModel = RoomsViewModel()
-            RoomListView(viewModel: roomsViewModel)
+        if roomsViewModel.participants.isEmpty {
+            OnBoardView(viewModel: roomsViewModel)
         } else {
-            OnBoardView(participants: $participants)
+            RoomListView(viewModel: roomsViewModel)
         }
     }
 }
 
 struct OnBoardView: View {
-    @State private var newParticipantName: String = ""
-    @Binding var participants: [Participant]?
+    
+    @ObservedObject var viewModel: RoomsViewModel
     
     var body: some View {
-        LazyVStack {
-            TextField("Participant Name", text: $newParticipantName)
-                .background(.gray)
-            Button(action: {}) {
-                Text("Next").frame(maxWidth: 300)
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-        }
+        ParticipantListView(viewModel: viewModel)
     }
 }
 
 struct iOSRoomListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            iOSRoomListView()
+            iOSRoomListView(roomsViewModel: RoomsViewModel())
         }
     }
 }
