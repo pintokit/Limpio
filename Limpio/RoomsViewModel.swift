@@ -10,6 +10,7 @@ import Foundation
 class RoomsViewModel: ObservableObject {
     
     @Published var rooms: [Room] = []
+    @Published var participants: [Participant] = []
     
     func refresh() async {
         let roomStore = RoomStore()
@@ -32,6 +33,31 @@ class RoomsViewModel: ObservableObject {
         let roomStore = RoomStore()
         do {
             try await roomStore.save(rooms: rooms)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    func refreshParticipants() async {
+        let store = ParticipantStore()
+        do {
+            participants = try await store.load()
+        } catch let error as NSError {
+            if error.code == 4 {
+                participants = Participant.listPreview
+                try! await store.save(participants: participants)
+            } else {
+                fatalError(error.localizedDescription)
+            }
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    func saveParticipant() async {
+        let store = ParticipantStore()
+        do {
+            try await store.save(participants: participants)
         } catch {
             fatalError(error.localizedDescription)
         }
