@@ -29,6 +29,8 @@
 		63B47651281B274100D9419B /* LimpioWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 63B47631281B273E00D9419B /* LimpioWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		63B47659281B275400D9419B /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C31281B23F7009CD2A1 /* RoomListView.swift */; };
 		63B4765A281B279300D9419B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC912819FF85004E3620 /* Room.swift */; };
+		63CB7436283EF2A8001A694C /* ParticipantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB7435283EF2A8001A694C /* ParticipantStore.swift */; };
+		63CB7437283EF2A8001A694C /* ParticipantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB7435283EF2A8001A694C /* ParticipantStore.swift */; };
 		63CB7439283EF5B4001A694C /* ParticipantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB7438283EF5B4001A694C /* ParticipantListView.swift */; };
 		63CB743A283EF5B4001A694C /* ParticipantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB7438283EF5B4001A694C /* ParticipantListView.swift */; };
 		63D11CB92817211E00AE1671 /* LimpioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D11CB82817211E00AE1671 /* LimpioApp.swift */; };
@@ -101,6 +103,7 @@
 		63B4764B281B274100D9419B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63B4764D281B274100D9419B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B4764E281B274100D9419B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		63CB7435283EF2A8001A694C /* ParticipantStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantStore.swift; sourceTree = "<group>"; };
 		63CB7438283EF5B4001A694C /* ParticipantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantListView.swift; sourceTree = "<group>"; };
 		63D11CB52817211E00AE1671 /* Limpio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Limpio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D11CB82817211E00AE1671 /* LimpioApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimpioApp.swift; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 				63D11CB82817211E00AE1671 /* LimpioApp.swift */,
 				63F3AC97281A0505004E3620 /* Models */,
 				639B1FA3283984480005310B /* RoomStore.swift */,
+				63CB7435283EF2A8001A694C /* ParticipantStore.swift */,
 				639B1FA6283987540005310B /* RoomsViewModel.swift */,
 				63CB7438283EF5B4001A694C /* ParticipantListView.swift */,
 				633D0C30281B23F7009CD2A1 /* RoomEditView.swift */,
@@ -361,6 +365,7 @@
 				63CB743A283EF5B4001A694C /* ParticipantListView.swift in Sources */,
 				63B4763F281B274000D9419B /* LimpioApp.swift in Sources */,
 				63E036C4281B2C06007B2E82 /* WatchRoomDetailView.swift in Sources */,
+				63CB7437283EF2A8001A694C /* ParticipantStore.swift in Sources */,
 				63B47645281B274000D9419B /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +384,7 @@
 				63D11CB92817211E00AE1671 /* LimpioApp.swift in Sources */,
 				63F3AC922819FF85004E3620 /* Room.swift in Sources */,
 				639B1FA7283987540005310B /* RoomsViewModel.swift in Sources */,
+				63CB7436283EF2A8001A694C /* ParticipantStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
