@@ -12,10 +12,10 @@ struct iOSRoomListView: View {
     @StateObject var roomsViewModel: RoomsViewModel
     
     var body: some View {
-        if roomsViewModel.participants.isEmpty {
-            OnBoardView(viewModel: roomsViewModel)
-        } else {
+        if roomsViewModel.isOnBoarded {
             RoomListView(viewModel: roomsViewModel)
+        } else {
+            OnBoardView(viewModel: roomsViewModel)
         }
     }
 }
