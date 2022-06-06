@@ -34,8 +34,22 @@ struct ParticipantListView: View {
                 .disabled(newParticipantName.isEmpty)
 #endif
             }
+#if os(watchOS)
+            Button("Done") {
+                Task {
+                    await viewModel.saveParticipant()
+                }
+                withAnimation {
+                    viewModel.isOnBoarded = false
                 }
             }
+            Button("Clear") {
+                Task {
+                    await viewModel.refreshParticipants()
+                }
+            }
+#endif
+        }
         .task {
             await viewModel.refreshParticipants()
         }
