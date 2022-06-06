@@ -28,7 +28,7 @@ struct RoomListView: View {
             .onMove {
                 viewModel.rooms.move(fromOffsets: $0, toOffset: $1)
                 Task {
-                    await viewModel.save()
+                    await viewModel.saveRoom()
                 }
             }
             HStack {
@@ -38,7 +38,7 @@ struct RoomListView: View {
                         let newRoom = Room(name: newRoomName)
                         viewModel.rooms.append(newRoom)
                         Task {
-                            await viewModel.save()
+                            await viewModel.saveRoom()
                         }
                         newRoomName = ""
                     }
@@ -49,10 +49,10 @@ struct RoomListView: View {
             }
         }
         .task {
-            await viewModel.refresh()
+            await viewModel.refreshRooms()
         }
         .refreshable {
-            await viewModel.refresh()
+            await viewModel.refreshRooms()
         }
         .navigationTitle("Rooms")
 #if os(iOS)

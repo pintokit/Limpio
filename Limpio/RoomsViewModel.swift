@@ -17,7 +17,7 @@ class RoomsViewModel: ObservableObject {
     @Published var participants: [Participant] = []
     @Published var rooms: [Room] = []
     
-    func refresh() async {
+    func refreshRooms() async {
         let roomStore = RoomStore()
         do {
             rooms = try await roomStore.load()
@@ -34,7 +34,7 @@ class RoomsViewModel: ObservableObject {
         }
     }
     
-    func save() async {
+    func saveRoom() async {
         let roomStore = RoomStore()
         do {
             try await roomStore.save(rooms: rooms)
