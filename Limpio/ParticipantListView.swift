@@ -23,9 +23,6 @@ struct ParticipantListView: View {
                     withAnimation {
                         let newParticipant = Participant(name: newParticipantName)
                         viewModel.participants.append(newParticipant)
-                        Task {
-                            await viewModel.saveParticipant()
-                        }
                         newParticipantName = ""
                     }
                 }) {

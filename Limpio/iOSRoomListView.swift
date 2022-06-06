@@ -28,6 +28,9 @@ struct OnBoardView: View {
         VStack {
             ParticipantListView(viewModel: viewModel)
             Button(action: {
+                Task {
+                    await viewModel.saveParticipant()
+                }
                 withAnimation {
                     viewModel.isOnBoarded = true
                 }
