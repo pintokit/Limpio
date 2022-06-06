@@ -19,18 +19,19 @@ struct ParticipantListView: View {
             }
             HStack {
                 TextField("New participant", text: $newParticipantName)
+#if os(iOS)
                 Button(action: {
                     withAnimation {
-                        let newParticipant = Participant(name: newParticipantName)
-                        viewModel.participants.append(newParticipant)
-                        newParticipantName = ""
+                        addParticipant()
                     }
                 }) {
                     Image(systemName: "plus.circle")
                 }
                 .disabled(newParticipantName.isEmpty)
+#endif
             }
-        }
+                }
+            }
         .task {
             await viewModel.refreshParticipants()
         }
@@ -38,6 +39,12 @@ struct ParticipantListView: View {
             await viewModel.refreshParticipants()
         }
         .navigationTitle("Participants")
+    }
+    
+    func addParticipant() {
+        let newParticipant = Participant(name: newParticipantName)
+        viewModel.participants.append(newParticipant)
+        newParticipantName = ""
     }
 }
 
