@@ -19,6 +19,10 @@ struct ParticipantListView: View {
             }
             HStack {
                 TextField("New participant", text: $newParticipantName)
+                    .submitLabel(.next)
+                    .onSubmit {
+                        addParticipant()
+                    }
 #if os(iOS)
                 Button(action: {
                     withAnimation {
