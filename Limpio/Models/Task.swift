@@ -5,10 +5,10 @@
 //  Created by David Solis on 4/27/22.
 //
 
-import Foundation
+import UIKit
 
 extension Room {
-    
+        
     struct Task: Identifiable, Codable {
         let id: UUID
         var name: String
@@ -33,10 +33,12 @@ extension Room {
 struct Participant: Identifiable, Codable, Hashable {
     let id: UUID
     var name: String
+    var photo: URL?
     
-    init(id: UUID = UUID(), name: String) {
+    init(id: UUID = UUID(), name: String, photo: URL? = nil) {
         self.id = id
         self.name = name
+        self.photo = photo
     }
 }
 
