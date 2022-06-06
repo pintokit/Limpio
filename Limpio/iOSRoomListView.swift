@@ -25,21 +25,26 @@ struct OnBoardView: View {
     @ObservedObject var viewModel: RoomsViewModel
     
     var body: some View {
-        VStack {
-            ParticipantListView(viewModel: viewModel)
-            Button(action: {
-                Task {
-                    await viewModel.saveParticipant()
+        ParticipantListView(viewModel: viewModel)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Clear") {
+                        Task {
+                            await viewModel.refreshParticipants()
+                        }
+                    }
                 }
-                withAnimation {
-                    viewModel.isOnBoarded = true
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") {
+                        Task {
+                            await viewModel.saveParticipant()
+                        }
+                        withAnimation {
+                            viewModel.isOnBoarded = true
+                        }
+                    }
                 }
-            }) {
-                Text("Done")
             }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-        }
     }
 }
 
