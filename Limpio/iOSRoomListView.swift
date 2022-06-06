@@ -25,7 +25,18 @@ struct OnBoardView: View {
     @ObservedObject var viewModel: RoomsViewModel
     
     var body: some View {
-        ParticipantListView(viewModel: viewModel)
+        VStack {
+            ParticipantListView(viewModel: viewModel)
+            Button(action: {
+                withAnimation {
+                    viewModel.isOnBoarded = true
+                }
+            }) {
+                Text("Done")
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+        }
     }
 }
 
