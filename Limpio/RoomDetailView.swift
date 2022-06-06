@@ -15,8 +15,8 @@ struct RoomDetailView: View {
         LazyVStack {
             ForEach(room.tasks) { task in
                 Label(task.name, systemImage: "pin.circle")
-                let tasks = Array(task.participants)
-                ForEach(tasks) { participant in
+                let participantNames = Array(task.participants)
+                ForEach(participantNames) { participant in
                     Label(participant.name, systemImage: "person")
                 }
                 Label(task.frequency.description.localizedLowercase, systemImage: "repeat.circle")
