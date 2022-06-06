@@ -40,7 +40,7 @@ struct ParticipantListView: View {
                     await viewModel.saveParticipant()
                 }
                 withAnimation {
-                    viewModel.isOnBoarded = false
+                    viewModel.isOnBoarded = true
                 }
             }
             Button("Clear") {
