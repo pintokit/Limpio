@@ -9,8 +9,13 @@ import Foundation
 
 class RoomsViewModel: ObservableObject {
     
-    @Published var rooms: [Room] = []
+    @Published var isOnBoarded: Bool = UserDefaults.standard.bool(forKey: "isOnBoarded") {
+        didSet {
+            UserDefaults.standard.set(isOnBoarded, forKey: "isOnBoarded")
+        }
+    }
     @Published var participants: [Participant] = []
+    @Published var rooms: [Room] = []
     
     func refresh() async {
         let roomStore = RoomStore()
