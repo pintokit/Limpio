@@ -23,9 +23,9 @@ struct Room: Identifiable, Codable {
 
 extension Room {
     static let listPreview: [Room] = [
-        Room(name: "Livingroom", tasks: [Task(name: "Clean couch", participants: ["Solis, Brandon, Mazza"], frequency: 1), Task(name: "Roomba", participants: ["Solis"], frequency: 2)]),
-        Room(name: "Bathroom", tasks: [Task(name: "Clean shower door", participants: ["Solis, Brandon, Mazza"], frequency: 2)]),
-        Room(name: "Kitchen", tasks: [Task(name: "Empty trash", participants: ["Solis, Brandon, Mazza"], frequency: 3)]),
-        Room(name: "Bedroom", tasks: [Task(name: "Make bed", participants: ["Solis"], frequency: 4)])
+        Room(name: "Livingroom", tasks: [Task(name: "Clean couch", participants: Set([Participant(name: "Solis"), Participant(name: "Brandon"), Participant(name: "Mazza")]), frequency: 1), Task(name: "Roomba", participants: Set([Participant(name: "Solis")]), frequency: 2)]),
+        Room(name: "Bathroom", tasks: [Task(name: "Clean shower door", participants: Set([Participant(name: "Solis"), Participant(name: "Brandon"), Participant(name: "Mazza")]), frequency: 2)]),
+        Room(name: "Kitchen", tasks: [Task(name: "Empty trash", participants: Set([Participant(name: "Solis"), Participant(name: "Brandon"), Participant(name: "Mazza")]), frequency: 3)]),
+        Room(name: "Bedroom", tasks: [Task(name: "Make bed", participants: Set([Participant(name: "Solis"), Participant(name: "Brandon"), Participant(name: "Mazza")]), frequency: 4)])
     ]
 }

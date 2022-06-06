@@ -18,13 +18,12 @@ extension Room {
         
         init(id: UUID = UUID(),
              name: String,
-             participants: Set<String>,
+             participants: Set<Participant>,
              frequency: Int,
              lastCompletionDate: Date = Date()) {
             self.id = id
             self.name = name
-            
-            self.participants = Set(participants.map { Participant(name: $0) })
+            self.participants = participants
             self.frequency = frequency
             self.lastCompletionDate = lastCompletionDate
         }
