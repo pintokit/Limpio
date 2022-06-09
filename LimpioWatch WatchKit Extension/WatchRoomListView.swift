@@ -12,12 +12,10 @@ struct WatchRoomListView: View {
     @StateObject var roomsViewModel: RoomsViewModel
     
     var body: some View {
-        NavigationView {
-            if roomsViewModel.isOnBoarded {
-                RoomListView(viewModel: roomsViewModel)
-            } else {
-                OnBoardView(viewModel: roomsViewModel)
-            }
+        if roomsViewModel.isOnBoarded {
+            RoomListView(viewModel: roomsViewModel)
+        } else {
+            OnBoardView(viewModel: roomsViewModel)
         }
     }
 }

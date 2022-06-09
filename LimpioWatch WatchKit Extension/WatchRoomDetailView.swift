@@ -12,9 +12,7 @@ struct WatchRoomDetailView: View {
     @Binding var room: Room
     
     var body: some View {
-        NavigationView {
-            RoomDetailView(room: $room)
-        }
+        RoomDetailView(room: $room)
     }
 }
 
