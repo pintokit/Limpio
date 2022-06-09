@@ -9,7 +9,7 @@ import UIKit
 
 extension Room {
         
-    struct Task: Identifiable, Codable {
+    struct Task: Identifiable, Codable, Hashable {
         let id: UUID
         var name: String
         var participants: Set<Participant>

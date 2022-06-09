@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Room: Identifiable, Codable {
+struct Room: Identifiable, Codable, Hashable {    
+    
     let id: UUID
     var name: String
     var tasks: [Task]
