@@ -12,36 +12,11 @@ struct iOSRoomListView: View {
     @StateObject var roomsViewModel: RoomsViewModel
     
     var body: some View {
-        if roomsViewModel.isOnBoarded {
-            RoomListView(viewModel: roomsViewModel)
-        } else {
-            OnBoardView(viewModel: roomsViewModel)
-        }
-    }
-}
-
-struct OnBoardView: View {
-    
-    @ObservedObject var viewModel: RoomsViewModel
-    
-    var body: some View {
-        ParticipantListView(viewModel: viewModel)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Clear") {
-                        Task {
-                            await viewModel.refreshParticipants()
-                        }
-                    }
-                }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") {
-                        Task {
-                            await viewModel.saveParticipant()
-                        }
-                        withAnimation {
-                            viewModel.isOnBoarded = true
-                        }
+        RoomListView(viewModel: roomsViewModel)
+            .sheet(isPresented: $roomsViewModel.onBoardUser) {
+                if #available(iOS 16.0, *) {
+                    NavigationStack {
+                        ParticipantListView(viewModel: roomsViewModel)
                     }
                 }
             }
@@ -50,8 +25,6 @@ struct OnBoardView: View {
 
 struct iOSRoomListView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            iOSRoomListView(roomsViewModel: RoomsViewModel())
-        }
+        iOSRoomListView(roomsViewModel: RoomsViewModel())
     }
 }

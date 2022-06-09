@@ -34,21 +34,24 @@ struct ParticipantListView: View {
                 .disabled(newParticipantName.isEmpty)
 #endif
             }
-#if os(watchOS)
-            Button("Done") {
-                Task {
-                    await viewModel.saveParticipant()
-                }
-                withAnimation {
-                    viewModel.isOnBoarded = true
-                }
-            }
-            Button("Clear") {
-                Task {
-                    await viewModel.refreshParticipants()
+        }
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Clear") {
+                    newParticipantName = ""
+                    viewModel.participants = []
+                    Task {
+                        await viewModel.saveParticipant()
+                    }
                 }
             }
-#endif
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Done") {
+                    Task {
+                        viewModel.onBoardUser.toggle()
+                    }
+                }
+            }
         }
         .task {
             await viewModel.refreshParticipants()
@@ -63,6 +66,9 @@ struct ParticipantListView: View {
         let newParticipant = Participant(name: newParticipantName)
         viewModel.participants.append(newParticipant)
         newParticipantName = ""
+        Task {
+            await viewModel.saveParticipant()
+        }
     }
 }
 

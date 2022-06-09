@@ -12,27 +12,19 @@ struct WatchRoomListView: View {
     @StateObject var roomsViewModel: RoomsViewModel
     
     var body: some View {
-        if roomsViewModel.isOnBoarded {
-            RoomListView(viewModel: roomsViewModel)
-        } else {
-            OnBoardView(viewModel: roomsViewModel)
-        }
-    }
-}
-
-struct OnBoardView: View {
-    
-    @ObservedObject var viewModel: RoomsViewModel
-    
-    var body: some View {
-        ParticipantListView(viewModel: viewModel)
+        RoomListView(viewModel: roomsViewModel)
+            .sheet(isPresented: $roomsViewModel.onBoardUser) {
+                if #available(watchOS 9.0, *) {
+                    NavigationStack {
+                        ParticipantListView(viewModel: roomsViewModel)
+                    }
+                }
+            }
     }
 }
 
 struct WatchRoomListView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            WatchRoomListView(roomsViewModel: RoomsViewModel())
-        }
+        WatchRoomListView(roomsViewModel: RoomsViewModel())
     }
 }
