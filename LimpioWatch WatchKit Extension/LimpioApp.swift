@@ -12,8 +12,14 @@ struct LimpioApp: App {
     
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            NavigationView {
-                WatchRoomListView(roomsViewModel: RoomsViewModel())
+            if #available(watchOS 9.0, *) {
+                NavigationStack {
+                    WatchRoomListView(roomsViewModel: RoomsViewModel())
+                }
+            } else {
+                NavigationView {
+                    WatchRoomListView(roomsViewModel: RoomsViewModel())
+                }
             }
         }
 

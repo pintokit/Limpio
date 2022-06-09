@@ -12,8 +12,14 @@ struct LimpioApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                iOSRoomListView(roomsViewModel: RoomsViewModel())
+            if #available(iOS 16.0, *) {
+                NavigationStack {
+                    iOSRoomListView(roomsViewModel: RoomsViewModel())
+                }
+            } else {
+                NavigationView {
+                    iOSRoomListView(roomsViewModel: RoomsViewModel())
+                }
             }
         }
     }
