@@ -9,22 +9,28 @@ import Foundation
 
 class RoomsViewModel: ObservableObject {
     
-    @Published var isOnBoarded: Bool = UserDefaults.standard.bool(forKey: "isOnBoarded") {
+    @MainActor @Published var onBoardUser: Bool = true {
         didSet {
-            UserDefaults.standard.set(isOnBoarded, forKey: "isOnBoarded")
+            DispatchQueue.main.async {
+                UserDefaults.standard.set(self.onBoardUser, forKey: "onBoardUser")
+            }
         }
     }
-    @Published var participants: [Participant] = []
-    @Published var rooms: [Room] = []
+    @MainActor @Published var participants: [Participant] = []
+    @MainActor @Published var rooms: [Room] = []
     
     func refreshRooms() async {
         let roomStore = RoomStore()
         do {
-            rooms = try await roomStore.load()
+            let loadedRooms = try await roomStore.load()
+            DispatchQueue.main.async {
+                self.rooms = loadedRooms
+            }
         } catch let error as NSError {
             if error.code == 4 {
-                // add sample room data after first launch
-                rooms = Room.listPreview
+                DispatchQueue.main.async {
+                    self.rooms = Room.listPreview
+                }
                 try! await roomStore.save(rooms: rooms)
             } else {
                 fatalError(error.localizedDescription)
@@ -46,10 +52,15 @@ class RoomsViewModel: ObservableObject {
     func refreshParticipants() async {
         let store = ParticipantStore()
         do {
-            participants = try await store.load()
+            let loadedParticipants = try await store.load()
+            DispatchQueue.main.async {
+                self.participants = loadedParticipants
+            }
         } catch let error as NSError {
             if error.code == 4 {
-                participants = Participant.listPreview
+                DispatchQueue.main.async {
+                    self.participants = Participant.listPreview
+                }
                 try! await store.save(participants: participants)
             } else {
                 fatalError(error.localizedDescription)
