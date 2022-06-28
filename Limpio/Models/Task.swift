@@ -27,6 +27,8 @@ extension Room {
             self.frequency = frequency
             self.lastCompletionDate = lastCompletionDate
         }
+        
+        static let editPreview: Room.Task = Room.Task(name: "Clear floor for roomba", participants: Set(Participant.listPreview), frequency: 2)
     }
 }
 
