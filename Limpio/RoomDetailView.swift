@@ -12,19 +12,23 @@ struct RoomDetailView: View {
     @Binding var room: Room
     
     var body: some View {
-        LazyVStack {
+        ScrollView {
             ForEach(room.tasks) { task in
-                Label(task.name, systemImage: "pin.circle")
-                let participantNames = Array(task.participants)
-                ForEach(participantNames) { participant in
-                    Label(participant.name, systemImage: "person")
+                VStack {
+                    Label(task.name, systemImage: "pin.circle")
+                    let participantNames = Array(task.participants)
+                    ForEach(participantNames) { participant in
+                        Label(participant.name, systemImage: "person")
+                    }
+                    Label(task.frequency.description.localizedLowercase, systemImage: "repeat.circle")
+                    HStack {
+                        Text("Completed:")
+                        Text(task.lastCompletionDate, style: .relative)
+                        Text("ago")
+                    }
+                    Divider()
                 }
-                Label(task.frequency.description.localizedLowercase, systemImage: "repeat.circle")
-                HStack {
-                    Text("Completed:")
-                    Text(task.lastCompletionDate, style: .relative)
-                    Text("ago")
-                }
+                .background(.purple)
             }
         }
         .navigationTitle(room.name)
