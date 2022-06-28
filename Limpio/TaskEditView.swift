@@ -29,7 +29,7 @@ struct TaskEditView: View {
     }
 }
 
-struct RoomEditView_Previews: PreviewProvider {
+struct TaskEditView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             TaskEditView(task: .constant(Room.Task.editPreview))
