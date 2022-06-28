@@ -1,5 +1,5 @@
 //
-//  RoomEditView.swift
+//  TaskEditView.swift
 //  Limpio
 //
 //  Created by David Solis on 4/27/22.
@@ -7,22 +7,32 @@
 
 import SwiftUI
 
-struct RoomEditView: View {
+struct TaskEditView: View {
     
-    @State private var roomName: String = ""
+    @Binding var task: Room.Task
+    @State private var taskName: String = ""
+    @State private var participant1 = false
+    @State private var participant2 = false
+    @State private var participant3 = false
     
     var body: some View {
         Form {
-            TextField("Room name", text: $roomName)
+            TextField("Task name", text: $taskName)
+            if #available(watchOS 9.0, *) {
+                Stepper("Frequency: \(task.frequency)", value: $task.frequency)
+            }
+            Toggle("Brandon", isOn: $participant1)
+            Toggle("Solis", isOn: $participant2)
+            Toggle("Mazza", isOn: $participant3)
         }
-        .navigationTitle("New Room")
+        .navigationTitle("Edit Task")
     }
 }
 
 struct RoomEditView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RoomEditView()
+            TaskEditView(task: .constant(Room.Task.editPreview))
         }
     }
 }
