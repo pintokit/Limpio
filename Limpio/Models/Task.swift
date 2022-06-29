@@ -12,13 +12,13 @@ extension Room {
     struct Task: Identifiable, Codable, Hashable {
         let id: UUID
         var name: String
-        var participants: Set<Participant>
+        var participants: [Participant]
         var frequency: Int
         var lastCompletionDate: Date
         
         init(id: UUID = UUID(),
              name: String,
-             participants: Set<Participant>,
+             participants: [Participant],
              frequency: Int,
              lastCompletionDate: Date = Date()) {
             self.id = id
@@ -28,7 +28,7 @@ extension Room {
             self.lastCompletionDate = lastCompletionDate
         }
         
-        static let editPreview: Room.Task = Room.Task(name: "Clear floor for roomba", participants: Set(Participant.listPreview), frequency: 2)
+        static let editPreview: Room.Task = Room.Task(name: "Clear floor for roomba", participants: Participant.listPreview, frequency: 2)
     }
 }
 
