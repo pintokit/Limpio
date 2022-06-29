@@ -11,9 +11,9 @@ struct TaskEditView: View {
     
     @Binding var task: Room.Task
     @State private var taskName: String = ""
-    @State private var participant1 = false
-    @State private var participant2 = false
-    @State private var participant3 = false
+    @State private var user1 = false
+    @State private var user2 = false
+    @State private var user3 = false
     
     var body: some View {
         Form {
@@ -21,9 +21,9 @@ struct TaskEditView: View {
             if #available(watchOS 9.0, *) {
                 Stepper("Frequency: \(task.frequency)", value: $task.frequency)
             }
-            Toggle("Brandon", isOn: $participant1)
-            Toggle("Solis", isOn: $participant2)
-            Toggle("Mazza", isOn: $participant3)
+            Toggle("Brandon", isOn: $user1)
+            Toggle("Solis", isOn: $user2)
+            Toggle("Mazza", isOn: $user3)
         }
         .navigationTitle("Edit Task")
     }
