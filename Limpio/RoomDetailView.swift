@@ -10,6 +10,7 @@ import SwiftUI
 struct RoomDetailView: View {
     
     @Binding var room: Room
+    @State private var isPresentingTaskEditView = false
     
     var body: some View {
         ScrollView {
@@ -29,6 +30,18 @@ struct RoomDetailView: View {
                     Divider()
                 }
                 .background(.purple)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    isPresentingTaskEditView = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+                .sheet(isPresented: $isPresentingTaskEditView) {
+                    
+                }
             }
         }
         .navigationTitle(room.name)
