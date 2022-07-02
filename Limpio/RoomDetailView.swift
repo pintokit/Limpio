@@ -13,7 +13,7 @@ struct RoomDetailView: View {
     @State private var isPresentingTaskEditView = false
     
     var body: some View {
-        ScrollView {
+        List {
             ForEach(room.tasks) { task in
                 VStack {
                     Label(task.name, systemImage: "pin.circle")
@@ -32,6 +32,7 @@ struct RoomDetailView: View {
                 .background(.purple)
             }
         }
+        .listStyle(.plain)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
