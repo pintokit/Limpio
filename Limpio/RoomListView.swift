@@ -15,7 +15,7 @@ struct RoomListView: View {
     var body: some View {
         List {
             ForEach($viewModel.rooms) { $room in
-                NavigationLink(destination: RoomDetailView(room: $room)) {
+                NavigationLink(destination: RoomDetailView(viewModel: viewModel, room: $room)) {
                     HStack {
                         Image(systemName: "house.fill")
                         Text(room.name)
