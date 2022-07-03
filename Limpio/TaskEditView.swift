@@ -26,6 +26,11 @@ struct TaskEditView: View {
             Toggle("Solis", isOn: $user2)
             Toggle("Mazza", isOn: $user3)
         }
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("Save") {}
+            }
+        }
         .navigationTitle("Edit Task")
         .task {
             taskName = task.name
