@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TaskEditView: View {
     
+    @ObservedObject var viewModel: RoomsViewModel
     @Binding var task: Room.Task
     @State private var taskName: String = ""
     @State private var user1 = false
@@ -26,13 +27,16 @@ struct TaskEditView: View {
             Toggle("Mazza", isOn: $user3)
         }
         .navigationTitle("Edit Task")
+        .task {
+            taskName = task.name
+        }
     }
 }
 
 struct TaskEditView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TaskEditView(task: .constant(Room.Task.editPreview))
+            TaskEditView(viewModel: RoomsViewModel(), task: .constant(Room.Task.editPreview))
         }
     }
 }
