@@ -30,6 +30,15 @@ struct TaskEditView: View {
             ToolbarItem(placement: .primaryAction) {
                 Button("Save") {}
             }
+#if os(iOS)
+            ToolbarItem(placement: .bottomBar) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "trash")
+                }
+            }
+#endif
         }
         .navigationTitle("Edit Task")
         .task {
