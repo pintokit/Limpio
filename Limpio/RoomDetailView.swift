@@ -31,6 +31,12 @@ struct RoomDetailView: View {
                 }
                 .background(.purple)
             }
+            .onDelete {
+                room.tasks.remove(atOffsets: $0)
+            }
+            .onMove {
+                room.tasks.move(fromOffsets: $0, toOffset: $1)
+            }
         }
         .listStyle(.plain)
         .toolbar {
@@ -41,9 +47,14 @@ struct RoomDetailView: View {
                     Image(systemName: "plus")
                 }
                 .sheet(isPresented: $isPresentingTaskEditView) {
-                    
+
                 }
             }
+#if os(iOS)
+            ToolbarItem(placement: .bottomBar) {
+                EditButton()
+            }
+#endif
         }
         .navigationTitle(room.name)
     }
