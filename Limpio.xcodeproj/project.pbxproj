@@ -10,6 +10,8 @@
 		633D0C37281B23F7009CD2A1 /* RoomEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C30281B23F7009CD2A1 /* RoomEditView.swift */; };
 		633D0C38281B23F7009CD2A1 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C31281B23F7009CD2A1 /* RoomListView.swift */; };
 		633D0C3A281B23F7009CD2A1 /* iOSRoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */; };
+		63709C78290DC72E0028BF3A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 63709C76290DC72E0028BF3A /* LICENSE */; };
+		63709C79290DC72E0028BF3A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63709C77290DC72E0028BF3A /* README.md */; };
 		6378561F281CABCE00DD4A9F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3AC93281A0036004E3620 /* Task.swift */; };
 		638DAEB328243EFF0091FF9B /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DAEB228243EFF0091FF9B /* RoomDetailView.swift */; };
 		638DAEB428243EFF0091FF9B /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DAEB228243EFF0091FF9B /* RoomDetailView.swift */; };
@@ -88,6 +90,8 @@
 		633D0C30281B23F7009CD2A1 /* RoomEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomEditView.swift; sourceTree = "<group>"; };
 		633D0C31281B23F7009CD2A1 /* RoomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		633D0C33281B23F7009CD2A1 /* iOSRoomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSRoomListView.swift; sourceTree = "<group>"; };
+		63709C76290DC72E0028BF3A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		63709C77290DC72E0028BF3A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		638DAEB228243EFF0091FF9B /* RoomDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		639B1FA3283984480005310B /* RoomStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomStore.swift; sourceTree = "<group>"; };
 		639B1FA6283987540005310B /* RoomsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewModel.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 		63D11CAC2817211E00AE1671 = {
 			isa = PBXGroup;
 			children = (
+				63709C76290DC72E0028BF3A /* LICENSE */,
+				63709C77290DC72E0028BF3A /* README.md */,
 				63D11CB72817211E00AE1671 /* Limpio */,
 				63B47632281B273E00D9419B /* LimpioWatch */,
 				63B4763D281B274000D9419B /* LimpioWatch WatchKit Extension */,
@@ -340,7 +346,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63709C78290DC72E0028BF3A /* LICENSE in Resources */,
 				63D11CC02817212200AE1671 /* Preview Assets.xcassets in Resources */,
+				63709C79290DC72E0028BF3A /* README.md in Resources */,
 				63D11CBD2817212200AE1671 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

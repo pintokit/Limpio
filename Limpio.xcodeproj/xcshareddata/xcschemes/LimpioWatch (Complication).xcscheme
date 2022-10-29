@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "63B47630281B273E00D9419B"
-               BuildableName = "LimpioWatch.app"
+               BuildableName = "Limpio.app"
                BlueprintName = "LimpioWatch"
                ReferencedContainer = "container:Limpio.xcodeproj">
             </BuildableReference>
@@ -60,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63B47630281B273E00D9419B"
-            BuildableName = "LimpioWatch.app"
+            BuildableName = "Limpio.app"
             BlueprintName = "LimpioWatch"
             ReferencedContainer = "container:Limpio.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63B47630281B273E00D9419B"
-            BuildableName = "LimpioWatch.app"
+            BuildableName = "Limpio.app"
             BlueprintName = "LimpioWatch"
             ReferencedContainer = "container:Limpio.xcodeproj">
          </BuildableReference>
